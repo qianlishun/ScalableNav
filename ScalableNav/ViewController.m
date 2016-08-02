@@ -50,12 +50,15 @@ static NSString *const kCellID = @"cell";
     self.tableView.frame = self.view.bounds;
 
     QScalableNav *navView = [[QScalableNav alloc]initWithFrame:CGRectMake(0, 0, kSize.width, 200) backgroundImage:@"cover" headerImage:@"cover" title:@"MrQ" subTitle:@"这是一段个性签名"];
+    [self.view addSubview:navView];
 
     navView.scrollView = self.tableView;
+    
     navView.imgActionBlock = ^(){
         NSLog(@"你点击了头像");
     };
-    [self.view addSubview:navView];}
+
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
