@@ -6,6 +6,12 @@
 //  Copyright © 2016年 MrQ. All rights reserved.
 //
 
+/*
+    动画参数根据个人喜好更改多次,可能对于一些图片不太合适
+    您可以根据自己的需要去QScalableNav中去设置自己的参数...
+    注释神马的看情况后面加一些吧...另外...暂时没有考虑该 view 和 NavigationBar共存的情况
+*/
+
 #import "ViewController.h"
 #import "QScalableNav.h"
 
