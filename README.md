@@ -16,8 +16,14 @@
 
 
     QScalableNav *navView = [[QScalableNav alloc]initWithFrame:CGRectMake(0, 0, kSize.width, 200) backgroundImage:@"cover" headerImage:@"cover" title:@"MrQ" subTitle:@"这是一段个性签名"];
-    [self.view addSubview:navView];
-    navView.scrollView = self.tableView;
+
+    navView.scrollView = self.tableView; //要写在 addSubview 之前
+
+    [self.view addSubview:navView]; 
+
+    // 设置昵称与签名颜色 (默认白色)
+    [navView setTitleColor:[UIColor blackColor] subTitleColor:[UIColor blueColor]];
+
 
 3.header 的点击事件
 
