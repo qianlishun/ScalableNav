@@ -1,5 +1,7 @@
 # ScalableNav
 ####下拉放大,上滑缩小
+####效果图
+<img src="http://ww2.sinaimg.cn/mw690/e70bae90jw1f6i6wbl6wrg207f08e14r.gif"/>
 
 ####使用说明
 
