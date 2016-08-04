@@ -30,7 +30,10 @@
         _backgroundImageView.image = [UIImage imageNamed:backgroudImage];
         _backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
 
-        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*0.5-70*0.5, 0.27*frame.size.height+navHeight, 70, 70)];
+//        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*0.5-70*0.5, 0.27*frame.size.height+navHeight, 70, 70)];
+        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
+        _headerImageView.center = CGPointMake(_backgroundImageView.center.x, self.backgroundImageView.center.y-10);
+
         _headerImageView.image = [UIImage imageNamed:headerImage];
         [_headerImageView.layer setMasksToBounds:YES];
         _headerImageView.layer.cornerRadius = _headerImageView.frame.size.width/2.0f;
@@ -90,7 +93,7 @@
 
         self.frame = CGRectMake(0, -offset+navHeight,self.scrollView.bounds.size.width + offset * 2, MaxHeight + offset*2);
         self.backgroundImageView.frame = CGRectMake(-offset, offset+navHeight, kSize.width + offset*2, MaxHeight + offset*2);
-        self.headerImageView.center = self.backgroundImageView.center;
+        self.headerImageView.center = CGPointMake(self.backgroundImageView.center.x, self.backgroundImageView.center.y-10) ;
         self.titleLabel.alpha = self.subTitleLabel.alpha = 1 - offset/10;
     }
     else{
@@ -128,6 +131,12 @@
     if (self.imgActionBlock) {
         self.imgActionBlock();
     }
+}
+
+-(void)setTitleColor:(UIColor *)titleColor subTitleColor:(UIColor *)subTitleColor{
+    self.titleLabel.textColor = titleColor;
+    self.subTitleLabel.textColor = subTitleColor;
+
 }
 
 @end

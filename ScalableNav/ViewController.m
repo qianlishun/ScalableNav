@@ -49,10 +49,12 @@ static NSString *const kCellID = @"cell";
 
     self.tableView.frame = self.view.bounds;
 
-    QScalableNav *navView = [[QScalableNav alloc]initWithFrame:CGRectMake(0, 0, kSize.width, 200) backgroundImage:@"cover" headerImage:@"cover" title:@"MrQ" subTitle:@"这是一段个性签名"];
-    [self.view addSubview:navView];
+    QScalableNav *navView = [[QScalableNav alloc]initWithFrame:CGRectMake(0, 0, kSize.width, 200) backgroundImage:@"cover" headerImage:@"header" title:@"MrQ" subTitle:@"这是一段个性签名"];
 
     navView.scrollView = self.tableView;
+
+    [self.view addSubview:navView];
+
     
     navView.imgActionBlock = ^(){
         NSLog(@"你点击了头像");

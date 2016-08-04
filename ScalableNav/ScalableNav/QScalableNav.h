@@ -20,6 +20,7 @@ static const CGFloat navHeight = 0;
 
 - (id)initWithFrame:(CGRect)frame backgroundImage:(NSString *)backgroudImage headerImage:(NSString *)headerImage title:(NSString *)title subTitle:(NSString *)subTitle;
 
--(void)updateSubViewsWithScrollOffset:(CGPoint)newOffset;
+- (void)updateSubViewsWithScrollOffset:(CGPoint)newOffset;
 
+- (void)setTitleColor:(UIColor *)titleColor subTitleColor:(UIColor *)subTitleColor;
 @end
