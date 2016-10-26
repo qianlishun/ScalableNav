@@ -8,6 +8,9 @@
 
 #import "QScalableNav.h"
 
+static const CGFloat MaxHeight = 200;
+static const CGFloat navHeight = 0;
+
 @interface QScalableNav ()
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
@@ -114,7 +117,7 @@
         self.subTitleLabel.alpha = alpha;
         self.titleLabel.alpha = alpha;
         self.frame = CGRectMake(0, newY+navHeight, self.frame.size.width, self.frame.size.height);
-        self.backgroundImageView.frame = CGRectMake(0, (1.5*self.frame.size.height)*(1-alpha)+navHeight, self.backgroundImageView.frame.size.width, self.backgroundImageView.frame.size.height);
+        self.backgroundImageView.frame = CGRectMake(0, navHeight, self.backgroundImageView.frame.size.width, self.backgroundImageView.frame.size.height);
 
         CGAffineTransform t = CGAffineTransformMakeTranslation(0,navHeight+(subviewOffset-0.35*self.frame.size.height)*(1-alpha));
 

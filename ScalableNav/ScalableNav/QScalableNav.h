@@ -10,8 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-static const CGFloat MaxHeight = 200;
-static const CGFloat navHeight = 0;
 
 @interface QScalableNav : UIView
 
