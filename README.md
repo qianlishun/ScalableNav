@@ -3,6 +3,7 @@
 ####效果图
 <img src="http://ww2.sinaimg.cn/mw690/e70bae90jw1f6i6wbl6wrg207f08e14r.gif"/>
 
+很多参数没用做什么适配调整,有可能因图片大小,屏幕尺寸而导致不合适,自行修改吧.
 ####使用说明
 
 在 tableView 中添加 ScalableNav 
