@@ -4,19 +4,19 @@
 
 <img src="http://ww2.sinaimg.cn/mw690/e70bae90jw1f6i6wbl6wrg207f08e14r.gif"/>
 
-很多参数没用做什么适配调整,有可能因图片大小,屏幕尺寸而导致不合适,自行修改吧.
-####使用说明
+很多参数没做什么适配调整,有可能因图片大小,屏幕尺寸而导致不合适,自行修改吧.
+#### 使用说明
 
 在 tableView 中添加 ScalableNav 
 
-1.建议设置
+0.建议设置
 
 
     [self.navigationController setNavigationBarHidden:YES];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.tableView.frame = self.view.bounds;
 
-2.添加ScalableNav
+1.添加ScalableNav
 
 
     QScalableNav *navView = [[QScalableNav alloc]initWithFrame:CGRectMake(0, 0, kSize.width, 200)
@@ -30,7 +30,7 @@
     [navView setTitleColor:[UIColor blackColor] subTitleColor:[UIColor blueColor]];
 
 
-3.header 的点击事件
+2.header 的点击事件
 
 
     navView.imgActionBlock = ^(){
